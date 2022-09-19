@@ -12,7 +12,7 @@ const CommaSeparator = ({ i, length }) => {
 const TagLinks = ({ tags }: Props) => {
   return (
     <div className="mb-6 text-lg">
-      {tags.map((tag, i, {length}) => (
+      tags: {tags.map((tag, i, {length}) => (
         <>
           <Link as={`/tags/${tag}`} href="/tags/[tag]">
             <a className="hover:underline">{tag}</a>

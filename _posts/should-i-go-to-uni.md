@@ -1,19 +1,19 @@
 ---
 title: 'Should I go to uni?'
 excerpt: 'At Digital Wave the other week I spoke to lots of young people interested in starting a career in software development. One question that kept coming up was, "Should I go to uni?".'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/should-i-go-to-uni/DigitalWave_18Oct_010.jpg'
 date: '2016-11-03T12:00:00.000Z'
 author:
   name: Tom Dudfield
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/should-i-go-to-uni/DigitalWave_18Oct_010.jpg'
 tags: [ development ]
 ---
 
 *At [Digital Wave](http://www.digitalwave.org.uk/) the other week I spoke to lots of young people interested in starting a career in software development. One question that kept coming up was, "Should I go to uni?".*
 
-It's been 8 years since I graduated from [Bournemouth Uni](https://www1.bournemouth.ac.uk/) with a degree in Software Engineering Management. I've worked alongside people who've achieved better degrees from top establishments, as well as people who have never stepped into one. Hopefully I can give some guidance based on my experience.
+It's been 8 years since I graduated from [Bournemouth Uni](https://www.bournemouth.ac.uk/) with a degree in Software Engineering Management. I've worked alongside people who've achieved better degrees from top establishments, as well as people who have never stepped into one. Hopefully I can give some guidance based on my experience.
 
 ##Not an easy decision
 I chose to go straight into uni after College at the age of 18, at the time it wasn't a difficult choice. There weren't the equivalent digital apprenticeships that are available nowadays, the only other option would have likely been some sort of frontline support role and trying to self-learn the profession in my own time. At the time tuition fees were about £1200 a year with the expectation that parents would cover them. This meant student loans only really needed to cover living costs. So for me, at the time, it was a no brainer to go. Now with tuition fees rising above £9000 it is a much harder choice.

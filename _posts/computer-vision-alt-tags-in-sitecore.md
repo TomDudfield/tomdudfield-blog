@@ -1,13 +1,13 @@
 ---
 title: 'Computer Vision Alt Tags in Sitecore'
 excerpt: 'Creating alt text for every image on your site can be a bit of a nuisance. Reviewing each image, coming up with accompanying text and checking each one all takes time, but it is essential. Now what if there was a way to magically suggest alt text when uploading images to Sitecore?'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/computer-vision-alt-tags-in-sitecore/barack-3.png'
 date: '2016-11-28T12:00:00.000Z'
 author:
   name: Tom Dudfield
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/computer-vision-alt-tags-in-sitecore/barack-3.png'
 tags: [ development, Sitecore, azure ]
 ---
 
@@ -22,7 +22,7 @@ At Redweb our Innovation lab technologists regularly tinker with new technologie
 ##How it works
 At [Future Decoded](https://futuredecoded.microsoft.com/) Microsoft showed the latest advancements it has made with its [Cognitive Services API's](https://www.microsoft.com/cognitive-services/en-us/apis), in particular the Computer Vision API. This module makes use of the [Describe Image](https://dev.projectoxford.ai/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fe) method on the API to generate a description of an image that has been uploaded into Sitecore, this can then be set as the alt text.
 
-![Big Ben](https://tomdudfield.com/content/images/2016/12/bigben.png)
+![Big Ben](/assets/computer-vision-alt-tags-in-sitecore/bigben.png)
 
 ##Show me the code
 If you want to compile your own dll or pull the code you can grab the latest code from [GitHub](https://github.com/TomDudfield/AutoAltTags). Otherwise the module is available as a Sitecore package on the [Sitecore Marketplace](https://marketplace.sitecore.net/en/Modules/A/Alt_Tag_Generator.aspx) or is available on [NuGet](https://www.nuget.org/packages/SitecoreAutoAltTags) to install directly into a solution. The module should work with versions 8.0 and above.
@@ -32,6 +32,6 @@ You will need to [generate a API key](https://www.microsoft.com/cognitive-servic
 ##Why bother?
 As a developer it is easy to overlook alt text but not only will you be improving your site’s accessibility standards, you could also drastically reduce the amount of effort involved for content editors. With this module alt text will be generated automatically saving considerable time but still providing the ability to tweak the text when it doesn't quite fit.
 
-![Sometimes it doesn't get it quite right](https://tomdudfield.com/content/images/2016/12/theresamay.png)
+![Sometimes it doesn't get it quite right](/assets/computer-vision-alt-tags-in-sitecore/theresamay.png)
 
 *Sometimes it needs a little tweaking*

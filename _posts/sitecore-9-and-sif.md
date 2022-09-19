@@ -1,13 +1,13 @@
 ---
 title: 'Sitecore 9 and the Sitecore Installation Framework'
 excerpt: 'Prior to Sitecore 9, setting up an instance of Sitecore either relied on running the Sitecore installer or extracting a ZIP file and jumping through a few hoops. This process was simplified with the introduction of Sitecore Instance Manager but it was still tedious when configuring different server roles. I will show you how to setup a Sitecore 9 instance, while it is not completely straightforward it is a lot more flexible.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/sitecore-9-and-sif/Untitled-1.png'
 date: '2018-02-08T12:00:00.000Z'
 author:
   name: Tom Dudfield
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/sitecore-9-and-sif/Untitled-1.png'
 tags: [ development, Sitecore ]
 ---
 
@@ -67,7 +67,7 @@ To install SIF you can download and install it from the [Sitecore Gallery](https
 
 *If you get a prompt when installing modules from an untrusted repository, press Y and ENTER*
 
-![Sitecore Installation Framework PowerShell](https://tomdudfield.com/content/images/2018/02/Untitled-2.png)
+![Sitecore Installation Framework PowerShell](/assets/sitecore-9-and-sif/Untitled-2.png)
 
 For developer installations, it is also required to install the Sitecore Fundamentals module which allows the creation of self-signed certificates for development environments.
 
@@ -75,14 +75,14 @@ For developer installations, it is also required to install the Sitecore Fundame
 
 *If you get a prompt when installing modules from an untrusted repository, press Y and ENTER*
 
-![Sitecore Fundamentals PowerShell](https://tomdudfield.com/content/images/2018/02/2.png)
+![Sitecore Fundamentals PowerShell](/assets/sitecore-9-and-sif/2.png)
 
 ## Single Server Development Instance
 This might have seen like a lot of steps to jump through to get this far however you only need to configure these things once, no matter how many instances of Sitecore you install. Unless you have a very specific scenario, typically you will want an XP Single (XP0) instance for development purposes.
 
 First things first, download the latest version of Sitecore 9 for On-Premises deployment, in my instance, this was *Sitecore 9.0.1 rev. 171219 (WDP XP0 packages).zip*. Once the file is downloaded make sure that you unblock it.
 
-![Unblock Zip](https://tomdudfield.com/content/images/2018/02/blocked.png)
+![Unblock Zip](/assets/sitecore-9-and-sif/blocked.png)
 
 Once extracted, go into the extracted files and extract *XP0 Configuration files 9.0.1 rev. 171219.zip* and copy all the files into the root folder alongside the scwdp zip files.
 
@@ -94,7 +94,7 @@ To simply this process Sitecore has provided a PowerShell script to call SIF wit
 
 Save this into the directory and run the script.
 
-![Sitecore Install](https://tomdudfield.com/content/images/2018/02/install-1.png)
+![Sitecore Install](/assets/sitecore-9-and-sif/install-1.png)
 
 Once complete you should have a clean Sitecore 9 instance. 
 

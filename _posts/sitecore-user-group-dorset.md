@@ -1,13 +1,13 @@
 ---
 title: 'Sitecore User Group Dorset'
 excerpt: 'I am organising the first Sitecore User Group in Dorset, it will be held in Redwebs Loading Bar on Thursday 29th September from 6pm.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/sitecore-user-group-dorset/SUGDorset_logo_Landscape_large.jpg'
 date: '2016-08-08T12:00:00.000Z'
 author:
   name: Tom Dudfield
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: '/assets/sitecore-user-group-dorset/SUGDorset_logo_Landscape_large.jpg'
 tags: [ development, Sitecore ]
 ---
 
