@@ -1,4 +1,5 @@
 import Container from './container'
+import Link from 'next/link'
 import cn from 'classnames'
 
 type Props = {
@@ -17,12 +18,12 @@ const Alert = ({ preview }: Props) => {
         <div className="py-2 text-center text-sm">
           <>
             This page is a preview.{' '}
-            <a
+            <Link
               href="/api/exit-preview"
               className="underline hover:text-teal-300 duration-200 transition-colors"
             >
               Click here
-            </a>{' '}
+            </Link>{' '}
             to exit preview mode.
           </>
         </div>
