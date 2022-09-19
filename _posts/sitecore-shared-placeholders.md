@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: development, Sitecore
+tags: [ development, Sitecore ]
 ---
 
 *Having recently attended SUGCON Europe 2016 in Copenhagen, I arrived back in Bournemouth buzzing with different ideas that we could make use of at Redweb.*

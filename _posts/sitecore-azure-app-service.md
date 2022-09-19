@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: development, Sitecore, azure
+tags: [ development, Sitecore, azure ]
 ---
 
 *Since Sitecore 6.3 there has been Microsoft Azure support through the separate Sitecore Azure Module. This allowed deploying Sitecore sites onto Azure Cloud Services. It required an on-premise management instance from which you could manage Azure farms. While it worked in some scenarios it lacked support for common Sitecore modules and there was still a dependency on having a management instance. The main problem for the module was that it was based on Cloud Services which lack support for common cloud features such as auto-scaling.*

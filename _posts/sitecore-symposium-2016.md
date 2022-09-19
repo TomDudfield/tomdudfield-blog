@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: development, Sitecore
+tags: [ development, Sitecore ]
 ---
 
 *I was fortunate enough to be able to attend Sitecore Symposium this year hosted in New Orleans. It is a two-day event aimed at Sitecore developers, marketers and business users. Sitecore showcases the latest features in the platform, outlining the product roadmap and providing inspiring keynotes.*

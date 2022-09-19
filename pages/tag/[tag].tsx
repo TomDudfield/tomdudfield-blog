@@ -4,7 +4,6 @@ import Container from '../components/container'
 import PostBody from '../components/post-body'
 import Header from '../components/header'
 import PostHeader from '../components/post-header'
-import PostFooter from '../components/post-footer'
 import Layout from '../components/layout'
 import { getPostBySlug, getAllPosts } from '../lib/api'
 import PostTitle from '../components/post-title'
@@ -24,7 +23,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
-  const title = `${post.title} | ${BLOG_NAME}`;
+  const title = `${post.title}  ${post.tags}| ${BLOG_NAME}`;
   return (
     <Layout preview={preview}>
       <Container>
@@ -45,7 +44,6 @@ export default function Post({ post, morePosts, preview }: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-              <PostFooter tags={post.tags} />
             </article>
           </>
         )}
@@ -69,7 +67,6 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
-    'tags'
   ])
   const content = await markdownToHtml(post.content || '')
 

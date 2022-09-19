@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: development, Sitecore
+tags: [ development, Sitecore ]
 ---
 
 *If you are currently running a solution on Sitecore 6.x or 7.x now is a great time to consider upgrading to 8.2.*

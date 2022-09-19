@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: development, Sitecore, coveo
+tags: [ development, Sitecore, coveo ]
 ---
 
 *Nowadays everybody takes sites like Google and Amazon for granted, whether it is to quickly find relevant information or to upsell relevant products, we barely notice how machine learning optimizes every day experiences for us.*

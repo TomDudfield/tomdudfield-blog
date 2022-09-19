@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: development, Sitecore
+tags: [ development, Sitecore ]
 ---
 
 *I am organising the first Sitecore User Group in Dorset, it will be held in Redweb’s Loading Bar on Thursday 29th September from 6pm.*

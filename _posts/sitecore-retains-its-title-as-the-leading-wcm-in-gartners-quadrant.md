@@ -8,7 +8,7 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
-# tags: Sitecore
+tags: [ Sitecore ]
 ---
 
 *Sitecore has secured its seventh year as a [Leader](http://www.sitecore.net/resources/index/analyst-reports/gartner-magic-quadrant) in Gartner’s Magic Quadrant for Web Content Management (WCM) systems and, for the second year in a row, it scores top in the ability to execute.*
