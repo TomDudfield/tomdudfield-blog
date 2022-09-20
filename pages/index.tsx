@@ -5,7 +5,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import { BLOG_NAME } from '../lib/constants'
+import { BLOG_NAME, BLOG_SUMMARY } from '../lib/constants'
 import Post from '../interfaces/post'
 
 type Props = {
@@ -20,6 +20,12 @@ export default function Index({ allPosts }: Props) {
       <Layout>
         <Head>
           <title>{BLOG_NAME}</title>
+          <meta property="og:title" content={BLOG_NAME} />  
+          <meta name="description" content={BLOG_SUMMARY} />  
+          <meta property="og:description" content={BLOG_SUMMARY} />  
+          {heroPost && (
+            <meta property="og:image" content={heroPost.ogImage.url} />
+          )}
         </Head>
         <Container>
           <Intro />
@@ -47,7 +53,8 @@ export const getStaticProps = async () => {
     'slug',
     'author',
     'coverImage',
-    'excerpt',
+    'ogImage',
+    'excerpt'
   ])
 
   return {

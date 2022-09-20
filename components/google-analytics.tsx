@@ -1,9 +1,7 @@
-import { AppProps, NextWebVitalsMetric } from 'next/app'
-import '../styles/index.css'
 import React from 'react';
 import Script from 'next/script';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const GA = ({ Component, pageProps }) => {
   return (
     <>
       <Script
@@ -25,8 +23,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export function reportWebVitals(metric: NextWebVitalsMetric) {
-  console.log(metric)
-}
-
-export default MyApp;
+export default GA;
