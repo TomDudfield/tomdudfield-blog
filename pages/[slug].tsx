@@ -10,7 +10,6 @@ import { getPostBySlug, getAllPosts } from '../lib/api'
 import PostTitle from '../components/post-title'
 import Head from 'next/head'
 import { BLOG_NAME } from '../lib/constants'
-import markdownToHtml from '../lib/markdownToHtml'
 import type PostType from '../interfaces/post'
 
 type Props = {
@@ -75,13 +74,11 @@ export async function getStaticProps({ params }: Params) {
     'excerpt',
     'tags'
   ])
-  const content = await markdownToHtml(post.content || '')
 
   return {
     props: {
       post: {
         ...post,
-        content,
       },
     },
   }

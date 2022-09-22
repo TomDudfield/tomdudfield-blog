@@ -1,7 +1,10 @@
 ---
 title: 'Sitecore shared placeholders'
 excerpt: 'Having recently attended SUGCON Europe 2016 in Copenhagen, I arrived back in Bournemouth buzzing with different ideas that we could make use of at Redweb.'
-coverImage: '/assets/sitecore-shared-placeholders/atomic-design.png'
+coverImage: 
+  src: '/assets/sitecore-shared-placeholders/atomic-design.png'
+  width: '1024'
+  height: '768'
 date: '2016-06-09T12:00:00.000Z'
 author:
   name: Tom Dudfield

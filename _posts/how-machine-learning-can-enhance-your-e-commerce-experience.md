@@ -1,7 +1,10 @@
 ---
 title: 'How machine learning can enhance your e-commerce experience'
 excerpt: 'Nowadays everybody takes sites like Google and Amazon for granted, whether it is to quickly find relevant information or to upsell relevant products, we barely notice how machine learning optimizes every day experiences for us.'
-coverImage: '/assets/how-machine-learning-can-enhance-your-e-commerce-experience/machine_learning-1.png'
+coverImage: 
+  src: '/assets/how-machine-learning-can-enhance-your-e-commerce-experience/machine_learning-1.png'
+  width: '800'
+  height: '419'
 date: '2017-10-19T12:00:00.000Z'
 author:
   name: Tom Dudfield
@@ -21,7 +24,7 @@ A powerful search alone is great but to make the most of it you need to understa
 
 This might be interesting but where does machine learning come in? It is about going beyond search and putting relevant information at people’s fingertips. Coveo Machine Learning learns from the data captured in Coveo Usage Analytics by analysing behaviour patterns to understand which results and content lead to best outcomes. Coveo for Sitecore currently supports Machine Learning in 3 separate ways; tuning results, query suggestions, and recommendation engines.
 
-![Recommendations](/assets/how-machine-learning-can-enhance-your-e-commerce-experience/Recommendations.png)
+![Recommendations {{ w: 800, h: 421 }}](/assets/how-machine-learning-can-enhance-your-e-commerce-experience/Recommendations.png)
 
 Query suggestions work by providing significantly more relevant suggestions for query completion, it provides suggestions based on previous successful outcomes. Machine Learning will enable query suggestions to be more tolerant to spelling mistakes and enable fuzzy matching on suggestions. It will learn which suggestions are most useful and adjust the relevance automatically.
 

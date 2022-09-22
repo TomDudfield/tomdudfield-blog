@@ -18,7 +18,7 @@ const securityHeaders = [
   },
   {
     key: 'Strict-Transport-Security',
-    value: 'max-age=63072000; includeSubDomains; preload'
+    value: 'max-age=31536000; includeSubDomains; preload'
   },
   {
     key: 'X-XSS-Protection',
@@ -30,7 +30,7 @@ const securityHeaders = [
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()'
+    value: 'accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()'
   },
   {
     key: 'X-Content-Type-Options',
@@ -58,7 +58,7 @@ const nextConfig = {
   },
   compress: true,
   trailingSlash: true,
-  reactStrictMode: true,
+  reactStrictMode: false,
   poweredByHeader: false,
   productionBrowserSourceMaps: true,
 }

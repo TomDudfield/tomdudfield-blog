@@ -13,12 +13,12 @@ const TagLinks = ({ tags }: Props) => {
   return (
     <div className="mb-6 text-lg">
       tags: {tags.map((tag, i, {length}) => (
-        <>
+        <span key={tag}>
           <Link as={`/tags/${tag}`} href="/tags/[tag]">
             <a className="hover:underline">{tag}</a>
           </Link>
           <CommaSeparator i={i} length={length} />
-        </>
+        </span>
       ))}
     </div>
   )
