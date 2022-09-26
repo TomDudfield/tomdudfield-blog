@@ -66,7 +66,7 @@ From the next dialog you can then copy out the entire url to the blob with the a
 * **exmCmMsDeployPackageUrl** - SAS url for Sitecore.Patch.EXM (Cloud)_CM.zip
 * **xcCollectMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1collection.scwdp.zip
 * **xcSearchMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1collectionsearch.scwdp.zip
-* **maOpsMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketingautomation.scwdp.zip
+* **maOpsMsDeployPackageUrl** - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketingautomation.scwdp.zip`
 * **maRepMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketingautomationreporting.scwdp.zip
 * **authCertificateBlob** - SAS url for certificate
 * **authCertificatePassword** - certificate password
