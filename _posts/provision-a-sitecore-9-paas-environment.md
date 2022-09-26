@@ -74,7 +74,8 @@ From the next dialog you can then copy out the entire url to the blob with the a
 ## Get provisioning
 Now's the time to bring it all together and provision an environment on Azure. In this script, you'll make use of the Sitecore Azure PowerShell Module provided in the Azure Toolkit to provision the environment. Change the relevant values in this script and save it alongside your other files.
 
-`$SCSDK="C:\Sitecore azure\Sitecore Azure Toolkit 2.0.1 rev. 171218"
+```
+$SCSDK="C:\Sitecore azure\Sitecore Azure Toolkit 2.0.1 rev. 171218"
 $SCTemplates="https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%209.0.1/XP/"
 $DeploymentId = "sitecore9-example"
 $LicenseFile = "C:\Sitecore azure\license.xml"
@@ -90,7 +91,8 @@ $Parameters = @{
 Import-Module $SCSDK\tools\Sitecore.Cloud.Cmdlets.psm1
 Add-AzureRMAccount
 Set-AzureRMContext -SubscriptionId $SubscriptionId
-Start-SitecoreAzureDeployment -Name $DeploymentId -Location $Location -ArmTemplateUrl "$SCTemplates/azuredeploy.json"  -ArmParametersPath $ParamFile  -LicenseXmlPath $LicenseFile  -SetKeyValue $Parameters`
+Start-SitecoreAzureDeployment -Name $DeploymentId -Location $Location -ArmTemplateUrl "$SCTemplates/azuredeploy.json"  -ArmParametersPath $ParamFile  -LicenseXmlPath $LicenseFile  -SetKeyValue $Parameters
+```
 
 To provision the environment, you can them simply call your script within an administrator PowerShell window.
 ![Provision the environment {{ w: 859, h: 271 }}](/assets/provision-a-sitecore-9-paas-environment/provision.png)
