@@ -24,4 +24,107 @@ Tim has come up with a [solution for Sitecore 7](https://allthingssitecore.com/2
 
 When implementing this on a Sitecore 8 solution, I ran into issues where the code didn't behave as expected, so I've had to tweak the code to get it working. I've taken the opportunity to enhance it slightly, you can now control the *placeholder names* and *Home Item ID* within configuration. I have also removed the need for the *JS* changes by adding another Sitecore pipeline - *RemoveSharedRenderings*.
 
-<script src="https://gist.github.com/TomDudfield/adf05764a8469a93278a16a220e073e1.js"></script>
+```
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml.Linq;
+using Sitecore;
+using Sitecore.Data;
+using Sitecore.Data.Fields;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Sitecore.Mvc.Extensions;
+using Sitecore.Mvc.Pipelines.Response.GetXmlBasedLayoutDefinition;
+using Sitecore.Mvc.Presentation;
+
+namespace Library.DotNet.Sc.Pipelines.GetXmlBasedLayoutDefinition
+{
+    public class GetFromLayoutFieldWithSharedPlaceholders : GetFromLayoutField
+    {
+        private readonly List<string> _placeholders = new List<string>();
+
+        public void AddPlaceholder(string placeholders)
+        {
+            if (!string.IsNullOrEmpty(placeholders))
+            {
+                _placeholders.Add(placeholders);
+            }
+        }
+
+        public string HomeItemTemplateId { get; set; }
+
+        public override void Process(GetXmlBasedLayoutDefinitionArgs args)
+        {
+            if (args.Result == null)
+            {
+                XElement content = GetFromField(args);
+                if (content != null)
+                {
+                    Item item = PageContext.Current.Item;
+                    if (item != null && item.TemplateID != new ID(HomeItemTemplateId))
+                    {
+                        Log.Debug("GetFromLayoutField - Process : Not on homepage");
+                        Item homeItem = Context.Database.GetItem(Context.Site.StartPath);
+                        if (homeItem != null)
+                        {
+                            Field homePageLayoutField = homeItem.Fields[FieldIDs.LayoutField];
+                            if (homePageLayoutField != null)
+                            {
+                                string fieldValue = LayoutField.GetFieldValue(homePageLayoutField);
+                                if (!fieldValue.IsWhiteSpaceOrNull())
+                                {
+                                    XElement homePageLayout = XDocument.Parse(fieldValue).Root;
+                                    XElement dXElement = content.Element("d");
+                                    if (dXElement != null && homePageLayout != null)
+                                    {
+                                        XElement dXElementInHomePageLayout = homePageLayout.Element("d");
+                                        if (dXElementInHomePageLayout != null)
+                                        {
+                                            var layoutElements = dXElementInHomePageLayout.Elements().ToList();
+
+                                            foreach (var placeholder in _placeholders)
+                                            {
+                                                dXElement.Add(ExtractContentsFromLayout(layoutElements, placeholder));
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                args.Result = content;
+            }
+        }
+        
+        private List<XElement> ExtractContentsFromLayout(IEnumerable<XElement> layoutElements, string placeholder)
+        {
+            Log.Debug(string.Format("GetFromLayoutField - Process : Starting to extract for placeholder {0}:", placeholder));
+
+            List<XElement> elements = new List<XElement>();
+
+            if (layoutElements.Any())
+            {
+                foreach (XElement element in layoutElements)
+                {
+                    if (element.HasAttributes)
+                    {
+                        if (element.Attribute("ph") != null)
+                        {
+                            string value = element.Attribute("ph").Value.ToLowerInvariant();
+                            if (!string.IsNullOrEmpty(value) && (value.StartsWith("/" + placeholder.ToLowerInvariant()) || value.Equals(placeholder.ToLowerInvariant())))
+                            {
+                                elements.Add(element);
+                            }
+                        }
+                    }
+                }
+            }
+            Log.Debug("GetFromLayoutField - Process : Done with extract");
+
+            return elements;
+        }
+    }
+}
+```
