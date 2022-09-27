@@ -2,9 +2,9 @@
 
 const contentSecurityPolicy = `
   default-src 'self';
-  script-src 'unsafe-eval';
+  script-src 'self' 'unsafe-eval';
   script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com;
-  style-src 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
   img-src 'self' data: https://www.google.co.uk;
   connect-src 'self' https://*.analytics.google.com;
   form-action 'none';
