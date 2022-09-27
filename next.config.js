@@ -6,7 +6,7 @@ const contentSecurityPolicy = `
   script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https://www.google.co.uk;
-  connect-src 'self' https://*.analytics.google.com;
+  connect-src 'self' https://*.analytics.google.com https://vitals.vercel-insights.com https://stats.g.doubleclick.net;
   form-action 'none';
   frame-ancestors 'none';
   report-uri https://dudfield.report-uri.com/r/d/csp/wizard
