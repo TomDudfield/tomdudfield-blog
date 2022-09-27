@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight'
 import markdownStyles from './markdown-styles.module.css'
 
 type Props = {
@@ -11,6 +12,7 @@ const PostBody = ({ content }: Props) => {
     <div className="prose max-w-2xl mx-auto">
       <ReactMarkdown 
         className={markdownStyles['markdown']}
+        rehypePlugins={[rehypeHighlight]}
         components={{
           img: function ({ ...props }) {
             const substrings = props.alt?.split('{{');

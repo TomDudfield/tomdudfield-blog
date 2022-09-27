@@ -24,7 +24,7 @@ Tim has come up with a [solution for Sitecore 7](https://allthingssitecore.com/2
 
 When implementing this on a Sitecore 8 solution, I ran into issues where the code didn't behave as expected, so I've had to tweak the code to get it working. I've taken the opportunity to enhance it slightly, you can now control the *placeholder names* and *Home Item ID* within configuration. I have also removed the need for the *JS* changes by adding another Sitecore pipeline - *RemoveSharedRenderings*.
 
-```
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
