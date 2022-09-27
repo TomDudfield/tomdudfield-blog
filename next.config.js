@@ -3,7 +3,7 @@
 const contentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval';
-  script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https://www.google.co.uk;
   connect-src 'self' https://*.analytics.google.com https://vitals.vercel-insights.com https://stats.g.doubleclick.net;
