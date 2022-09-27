@@ -1,16 +1,19 @@
 // @ts-check
 
+const contentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' 'unsafe-eval';
+  script-src-elem 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: https://www.google.co.uk;
+  connect-src 'self' https://*.analytics.google.com https://vitals.vercel-insights.com https://stats.g.doubleclick.net;
+  form-action 'none';
+  frame-ancestors 'none';
+  report-uri https://dudfield.report-uri.com/r/d/csp/wizard
+`
 /**
  * @type {import('next').NextConfig}
  **/
-
-// const contentSecurityPolicy = `
-//   default-src 'self';
-//   script-src 'self';
-//   child-src example.com;
-//   style-src 'self' example.com;
-//   font-src 'self';  
-// `
 const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
@@ -40,10 +43,10 @@ const securityHeaders = [
     key: 'Referrer-Policy',
     value: 'strict-origin-when-cross-origin'
   },
-  // {
-  //   key: 'Content-Security-Policy',
-  //   value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
-  // }
+  {
+    key: 'Content-Security-Policy',
+    value: contentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
+  }
 ]
 
 const nextConfig = {
