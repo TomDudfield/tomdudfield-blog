@@ -24,11 +24,12 @@ export default function Document(ctx) {
   }
   else {
     contentSecurityPolicy += `
-    style-src 'self'; 
+    style-src 'self' 'unsafe-inline'; 
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com
-    ${cspHashOf(
-      NextScript.getInlineScriptSource(ctx)
-    )}`
+    `
+    //  ${cspHashOf(
+    //   NextScript.getInlineScriptSource(ctx)
+    // )}
   }
 
   // let contentSecurityPolicy = ''
