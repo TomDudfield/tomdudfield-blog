@@ -24,14 +24,23 @@ export default function Document(ctx) {
   }
   else {
     contentSecurityPolicy += `
-    style-src 'self'; 
+    style-src 'self' 'unsafe-inline'; 
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com
-   
     `
     //  ${cspHashOf(
     //   NextScript.getInlineScriptSource(ctx)
     // )}
   }
+
+  // let contentSecurityPolicy = ''
+  // if (process.env.NODE_ENV === 'production') {
+  //   contentSecurityPolicy = `default-src 'self'; style-src 'nonce-${nonce}';`
+  // } else {
+  //   // react-refresh needs 'unsafe-eval'
+  //   // Next.js needs 'unsafe-inline' during development https://github.com/vercel/next.js/blob/canary/packages/next/client/dev/fouc.js
+  //   // Specifying 'nonce' makes a modern browsers ignore 'unsafe-inline'
+  //   contentSecurityPolicy = `default-src 'self'; style-src 'unsafe-inline'; script-src 'self' 'unsafe-eval';`
+  // }
 
   return (
     <Html>
