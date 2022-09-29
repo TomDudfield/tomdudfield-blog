@@ -8,6 +8,7 @@ let contentSecurityPolicy = `
   form-action 'none';
   frame-ancestors 'none';
   object-src 'none';
+  base-uri 'self';
   report-uri https://dudfield.report-uri.com/r/d/csp/wizard;`
 
 if (process.env.NODE_ENV !== 'production') {
@@ -55,7 +56,7 @@ const securityHeaders = [
   },
   {
     key: 'Access-Control-Allow-Origin',
-    value: ''
+    value: 'https://www.tomdudfield.com'
   },
   {
     key: 'Content-Security-Policy',
