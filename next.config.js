@@ -7,7 +7,7 @@ let contentSecurityPolicy = `
   connect-src 'self' https://*.analytics.google.com https://vitals.vercel-insights.com https://stats.g.doubleclick.net;
   form-action 'none';
   frame-ancestors 'none';
-  report-uri https://dudfield.report-uri.com/r/d/csp/wizard`
+  report-uri https://dudfield.report-uri.com/r/d/csp/wizard;`
 
 if (process.env.NODE_ENV !== 'production') {
   contentSecurityPolicy += `
