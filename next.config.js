@@ -59,6 +59,10 @@ const securityHeaders = [
     value: 'https://www.tomdudfield.com'
   },
   {
+    key: 'Expect-CT',
+    value: 'max-age=0, report-uri="https://dudfield.report-uri.com/r/d/ct/reportOnly"'
+  },
+  {
     key: 'Content-Security-Policy',
     value: contentSecurityPolicy.replace(/\s{2,}/g, ' ').trim()
   }
