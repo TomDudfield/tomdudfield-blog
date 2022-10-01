@@ -49,27 +49,27 @@ When configuring the json, you need to generate Shared Access Signature urls to 
 From the next dialog you can then copy out the entire url to the blob with the appropriate SAS signature.
 ![Gernerated SAS signature {{ w: 502, h: 552 }}](/assets/provision-a-sitecore-9-paas-environment/sas2.png)
 
-* **sitecoreSKU** - e.g. "Medium" depending on the [performance required](https://kb.sitecore.net/articles/043375)
-* **deploymentId** - this is used as a prefix to name all the resources
-* **location** - the Azure region
-* **sitecoreAdminPassword** - something other than "b"!!
-* **licenseXml** - leave blank - this isn't needed
-* **repAuthenticationApiKey** - generate a new guid for this
-* **sqlServerLogin** - an obsure username for SQL
-* **sqlServerPassword** - a secure password for SQL
-* **cmMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_cm.scwdp.zip
-* **cdMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_cd.scwdp.zip
-* **prcMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_prc.scwdp.zip
-* **repMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_rep.scwdp.zip
-* **xcRefDataMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1referencedata.scwdp.zip
-* **exmDdsMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_dds.scwdp.zip
-* **exmCmMsDeployPackageUrl** - SAS url for Sitecore.Patch.EXM (Cloud)_CM.zip
-* **xcCollectMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1collection.scwdp.zip
-* **xcSearchMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1collectionsearch.scwdp.zip
-* **maOpsMsDeployPackageUrl** - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketingautomation.scwdp.zip`
-* **maRepMsDeployPackageUrl** - SAS url for Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketingautomationreporting.scwdp.zip
-* **authCertificateBlob** - SAS url for certificate
-* **authCertificatePassword** - certificate password
+* sitecoreSKU - e.g. "Medium" depending on the [performance required](https://kb.sitecore.net/articles/043375)
+* deploymentId - this is used as a prefix to name all the resources
+* location - the Azure region
+* sitecoreAdminPassword - something other than "b"!!
+* licenseXml - leave blank - this isn't needed
+* repAuthenticationApiKey - generate a new guid for this
+* sqlServerLogin - an obsure username for SQL
+* sqlServerPassword - a secure password for SQL
+* cmMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_cm.scwdp.zip`
+* cdMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_cd.scwdp.zip`
+* prcMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_prc.scwdp.zip`
+* repMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_rep.scwdp.zip`
+* xcRefDataMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1 referencedata.scwdp.zip`
+* exmDdsMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_dds.scwdp.zip`
+* exmCmMsDeployPackageUrl - SAS url for `Sitecore.Patch.EXM (Cloud)_CM.zip`
+* xcCollectMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1collection.scwdp.zip`
+* xcSearchMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1 collectionsearch.scwdp.zip`
+* maOpsMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketing automation.scwdp.zip`
+* maRepMsDeployPackageUrl - SAS url for `Sitecore 9.0.1 rev. 171219 (Cloud)_xp1marketing automationreporting.scwdp.zip`
+* authCertificateBlob - SAS url for certificate
+* authCertificatePassword - certificate password
 
 ## Get provisioning
 Now's the time to bring it all together and provision an environment on Azure. In this script, you'll make use of the Sitecore Azure PowerShell Module provided in the Azure Toolkit to provision the environment. Change the relevant values in this script and save it alongside your other files.
