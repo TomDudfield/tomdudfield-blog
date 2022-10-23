@@ -1,6 +1,7 @@
 import '../styles/index.css'
 import { NextWebVitalsMetric } from 'next/app'
 import React from 'react';
+import App from "next/app"
 import Script from 'next/script';
 import Head from 'next/head';
 
@@ -35,15 +36,17 @@ export function reportWebVitals(metric: NextWebVitalsMetric) {
   console.log(metric)
 }
 
-MyApp.getInitialProps = ({ ctx }) => {
+MyApp.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext);
   const isProd = process.env.NODE_ENV === "production";
   const base = isProd ? "https://www.tomdudfield.com" : "http://localhost:3000";
-  const { asPath } = ctx;
+  const { asPath } = appContext.ctx;
   const canonical = base + asPath;
 
   return {
-    canonical,
-  };
-};
+    ...appProps,
+    canonical
+  }
+}
 
 export default MyApp;
