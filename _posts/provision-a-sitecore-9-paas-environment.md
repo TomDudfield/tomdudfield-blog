@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/provision-a-sitecore-9-paas-environment/Untitled-1-2.png'
-tags: [ development, Sitecore, azure ]
+tags: [ 'development', 'Sitecore', 'Azure' ]
+draft: 'false'
 ---
 
 *In this article I am going to run through how to provision Sitecore 9 XP on Microsoft Azure in a PaaS configuration. This is probably the most common scenario for deploying Sitecore to the cloud however it can easily be configured based on size and topology.*

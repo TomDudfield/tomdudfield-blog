@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/promoting-teams/award_wall.jpg'
-tags: [ agencies ]
+tags: [ 'agencies' ]
+draft: 'false'
 ---
 
 *Since I joined Redweb 3 and a half years ago, I have seen the agency develop and grow significantly. When I joined the agency there were 80 staff. We are now heading over 120! With that has come many problems and challenges.*

@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/should-i-go-to-uni/DigitalWave_18Oct_010.jpg'
-tags: [ development ]
+tags: [ 'development' ]
+draft: 'false'
 ---
 
 *At [Digital Wave](http://www.digitalwave.org.uk/) the other week I spoke to lots of young people interested in starting a career in software development. One question that kept coming up was, "Should I go to uni?".*
