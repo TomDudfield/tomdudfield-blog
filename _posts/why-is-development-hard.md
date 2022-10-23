@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/why-is-development-hard/silver_bullet.jpg'
-tags: [ development, agencies ]
+tags: [ 'development', 'agencies' ]
+draft: 'false'
 ---
 
 *We often see high profile failures, massive budget overruns, and lengthy project delays in the IT sector. In fact, only about [34% of projects](http://esj.com/articles/2010/10/05/managing-requirement-changes.aspx) meet scope, cost and schedule goals. But most of the challenges we face in IT are not unique to agencies – a lot of these issues are common throughout the software industry.*

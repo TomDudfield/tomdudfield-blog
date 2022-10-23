@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/computer-vision-alt-tags-in-sitecore/barack-3.png'
-tags: [ development, Sitecore, azure ]
+tags: [ 'development', 'Sitecore', 'Azure' ]
+draft: 'false'
 ---
 
 *Creating alt text for every image on your site can be a bit of a nuisance. Reviewing each image, coming up with accompanying text and checking each one all takes time, but it is essential. Now what if there was a way to magically suggest alt text when uploading images to Sitecore?*

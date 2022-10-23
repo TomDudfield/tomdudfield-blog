@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/why-upgrade-to-sitecore-xp-8-2/sitecore-1920x1080.jpg'
-tags: [ development, Sitecore ]
+tags: [ 'development', 'Sitecore' ]
+draft: 'false'
 ---
 
 *If you are currently running a solution on Sitecore 6.x or 7.x now is a great time to consider upgrading to 8.2.*

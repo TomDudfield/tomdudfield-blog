@@ -13,6 +13,7 @@ type PostType = {
   }
   content: string
   tags: Array<string>
+  draft: string
 }
 
 export default PostType

@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/sitecore-9-and-sif/Untitled-1.png'
-tags: [ development, Sitecore ]
+tags: [ 'development', 'Sitecore' ]
+draft: 'false'
 ---
 
 *Prior to Sitecore 9, setting up an instance of Sitecore either relied on running the Sitecore installer or extracting a ZIP file and jumping through a few hoops. This process was simplified with the introduction of Sitecore Instance Manager but it was still tedious when configuring different server roles. I will show you how to setup a Sitecore 9 instance, while it is not completely straightforward it is a lot more flexible.*

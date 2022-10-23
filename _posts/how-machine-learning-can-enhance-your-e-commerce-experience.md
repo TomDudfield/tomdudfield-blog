@@ -11,7 +11,8 @@ author:
   picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
   url: '/assets/how-machine-learning-can-enhance-your-e-commerce-experience/machine_learning-1.png'
-tags: [ development, Sitecore, coveo ]
+tags: [ 'development', 'Sitecore', 'Coveo' ]
+draft: 'false'
 ---
 
 *Nowadays everybody takes sites like Google and Amazon for granted, whether it is to quickly find relevant information or to upsell relevant products, we barely notice how machine learning optimizes every day experiences for us.*
