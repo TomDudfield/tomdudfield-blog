@@ -1,11 +1,11 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import Post from '../interfaces/post'
-import Seo from '../components/seo'
-import { getAllPosts } from '../lib/api'
+import Container from '../../components/container'
+import MoreStories from '../../components/more-stories'
+import HeroPost from '../../components/hero-post'
+import Intro from '../../components/intro'
+import Layout from '../../components/layout'
+import Post from '../../interfaces/post'
+import Seo from '../../components/seo'
+import { getAllPosts, getAllTags } from '../../lib/api'
 
 type Props = {
   allPosts: Post[]
@@ -39,7 +39,13 @@ export default function Index({ allPosts }: Props) {
   )
 }
 
-export const getStaticProps = async () => {
+type Params = {
+  params: {
+    tag: string
+  }
+}
+
+export const getStaticProps = async ({ params }: Params) => {
   const allPosts = getAllPosts([
     'title',
     'date',
@@ -50,9 +56,24 @@ export const getStaticProps = async () => {
     'excerpt',
     'draft',
     'tags'
-  ], '')
+  ], params.tag)
   
   return {
     props: { allPosts },
+  }
+}
+
+export async function getStaticPaths() {
+  const tags = getAllTags()
+
+  return {
+    paths: tags.map((tag) => {
+      return {
+        params: {
+          tag: tag,
+        },
+      }
+    }),
+    fallback: false,
   }
 }

@@ -78,6 +78,50 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/tags',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/author',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/author/tom',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/why-is-development-hard/amp',
+        destination: '/why-is-development-hard',
+        permanent: true,
+      },
+      {
+        source: '/promoting-teams/amp',
+        destination: '/promoting-teams',
+        permanent: true,
+      },
+      {
+        source: '/sitecore-user-group-dorset/amp',
+        destination: '/sitecore-user-group-dorset',
+        permanent: true,
+      },
+      {
+        source: '/sitecore-symposium-2016/amp',
+        destination: '/sitecore-symposium-2016',
+        permanent: true,
+      },
+      {
+        source: '/should-i-go-to-uni/amp',
+        destination: '/should-i-go-to-uni',
+        permanent: true,
+      }
+    ]
+  },
   compress: true,
   trailingSlash: true,
   reactStrictMode: false,
