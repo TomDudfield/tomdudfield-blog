@@ -5,8 +5,8 @@ import Link from 'next/link'
 type Props = {
   title: string
   src: string
-  width: string
-  height: string
+  width: number
+  height: number
   slug?: string
 }
 

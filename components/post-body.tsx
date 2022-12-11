@@ -19,9 +19,11 @@ const PostBody = ({ content }: Props) => {
             const alt = substrings[0].trim();
 
             const width = substrings[1] ? substrings[1].match(/(?<=w:\s?)\d+/g)[0] : 800;
+            const w: number = +width;
             const height = substrings[1] ? substrings[1].match(/(?<=h:\s?)\d+/g)[0] : 600;
+            const h: number = +height;
 
-            return <Image src={props.src} alt={alt} width={width} height={height} />;
+            return <Image src={props.src} alt={alt} width={w} height={h} />;
           },
         }}
       >
