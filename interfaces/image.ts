@@ -1,7 +1,7 @@
 type PostImage = {
   src: string
-  width: string
-  height: string
+  width: number
+  height: number
 }
 
 export default PostImage

@@ -59,7 +59,7 @@ export function getAllTags() {
     
     if (data.tags && data.draft !== true) {
       data.tags.forEach((tag) => {
-        tags.push(tag)
+        tags.push((tag as string).toLowerCase())
       })
     }
   })
