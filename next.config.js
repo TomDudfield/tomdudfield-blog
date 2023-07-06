@@ -120,9 +120,8 @@ const nextConfig = {
   },
   compress: true,
   trailingSlash: true,
-  reactStrictMode: false,
   poweredByHeader: false,
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
 }
 
 module.exports = nextConfig
