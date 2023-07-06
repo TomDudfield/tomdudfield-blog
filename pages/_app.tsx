@@ -21,21 +21,6 @@ function MyApp({ Component, pageProps }) {
         <meta key="og_url" property="og:url" content={canonical} />
         <link rel="canonical" href={canonical} />
       </Head>
-      
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-0WF17H5HPY"
-        strategy="lazyOnload"
-      />
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-0WF17H5HPY');
-        `}
-      </Script>
-
       <Component {...pageProps} />
     </>
   );
