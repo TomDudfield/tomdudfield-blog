@@ -15,7 +15,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const { data, content } = matter(fileContents)
 
   type Items = {
-    [key: string]: string
+    [key: string]: any
   }
 
   const items: Items = {}
@@ -40,29 +40,29 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 export function getAllPosts(fields: string[] = [], tag: string = '') {
   const slugs = getPostSlugs()
   const posts = slugs
-  .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug, fields))
     .filter((post) => post.draft === 'false')
-    .filter((post) => tag === '' || post.tags.includes(tag) )
+    .filter((post) => tag === '' || post.tags.some(t => t.toLowerCase() === tag.toLowerCase()))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
 }
 
 export function getAllTags() {
-  let files = fs.readdirSync(postsDirectory)
-  let tags = []
+  const files = fs.readdirSync(postsDirectory)
+  const tags = new Set<string>()
 
   files.forEach((file) => {
     const fullPath = join(postsDirectory, file)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data } = matter(fileContents)
     
-    if (data.tags && data.draft !== true) {
+    if (data.tags && data.draft === 'false') {
       data.tags.forEach((tag) => {
-        tags.push((tag as string).toLowerCase())
+        tags.add((tag as string).toLowerCase())
       })
     }
   })
   
-  return tags
+  return Array.from(tags)
 }

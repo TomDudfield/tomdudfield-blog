@@ -14,7 +14,7 @@ const TagLinks = ({ tags }: Props) => {
     <div className="mb-6 text-lg">
       tags: {tags.map((tag, i, {length}) => (
         <span key={tag}>
-          <Link className='hover:underline' as={`/tags/${tag.toLowerCase()}`} href="/tags/[tag]">
+          <Link className='hover:underline' href={`/tags/${tag.toLowerCase()}`}>
             {tag}
           </Link>
           <CommaSeparator i={i} length={length} />
