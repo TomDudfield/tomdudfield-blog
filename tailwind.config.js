@@ -39,7 +39,5 @@ module.exports = {
     pattern: /hljs+/,
   }],
   plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwind-highlightjs')
   ],
 }

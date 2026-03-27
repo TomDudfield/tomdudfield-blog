@@ -9,12 +9,12 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="prose max-w-2xl mx-auto">
+    <div className={`prose max-w-2xl mx-auto ${markdownStyles['markdown']}`}>
       <ReactMarkdown 
-        className={markdownStyles['markdown']}
         rehypePlugins={[rehypeHighlight]}
         components={{
           img: function ({ ...props }) {
+            if (typeof props.src !== 'string') return null;
             const substrings = props.alt?.split('{{');
             const alt = substrings[0].trim();
 
